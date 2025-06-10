@@ -68,10 +68,10 @@ def build(repo_url, repo_path, version):
     shutil.rmtree(temp_dir, ignore_errors=True)
 
 
-repo_url = "https://github.com/paulbouwer/hello-kubernetes"
-repo_path = "src/app"
-version = "25.3000"
-
-# repo_url, repo_path, version = input().split() # если через консоль ввод, (вход(?))
+# repo_url = "https://github.com/paulbouwer/hello-kubernetes"
+# repo_path = "src/app"
+# version = "25.3000"
+log("Ожидание ввода")
+repo_url, repo_path, version = input().split()
 
 build(repo_url, repo_path, version)
