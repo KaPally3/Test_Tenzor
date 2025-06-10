@@ -3,6 +3,7 @@ import shutil
 import os
 import subprocess
 import json
+import sys
 from pathlib import Path
 
 
@@ -71,7 +72,5 @@ def build(repo_url, repo_path, version):
 # repo_url = "https://github.com/paulbouwer/hello-kubernetes"
 # repo_path = "src/app"
 # version = "25.3000"
-log("Ожидание ввода")
-repo_url, repo_path, version = input().split()
 
-build(repo_url, repo_path, version)
+build(sys.argv[1], sys.argv[2], sys.argv[3])
